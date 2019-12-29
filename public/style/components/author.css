@@ -1,0 +1,20 @@
+.hunt-author-div{
+    text-align: center;
+    padding: 1rem;
+}
+
+.hunt-author-introduction{
+    font-size: .8rem;
+    color: #999;
+}
+.hunt-account{
+    position: relative;
+    background-color: #666;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+.hunt-account i {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}

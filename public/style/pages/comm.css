@@ -1,0 +1,30 @@
+body {
+  background-color: #f6f6f6;
+}
+
+.comm-left{
+  padding:.3rem;
+  border-radius: .3rem;
+  border-bottom:1px solid #eee;
+}
+.comm-right{
+  margin-left: .5rem;
+  padding:.3rem;
+  border-radius: .3rem;
+  border-bottom:1px solid #eee;
+
+}
+.comm-main{
+  margin-top: .5rem;
+}
+.comm-scroll-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    user-select: none;
+    z-index: 999999;
+}
+.comm-scroll-btn span {
+  display: block;
+  transform: rotateZ(90deg);
+}

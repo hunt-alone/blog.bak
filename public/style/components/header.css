@@ -1,0 +1,26 @@
+.hunt-header{
+  width: 100%;
+  padding: .6rem 0;
+  border-bottom: 4px solid #D3D3D3;
+  height: 4.8rem;
+  overflow: hidden;
+  user-select: none;
+  position: fixed;
+  background: #f6f6f6;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.hunt-header-title{
+  margin-left: .5rem;
+}
+.hunt-header-sign{
+  width: 98%;
+  font-size: .6rem;
+  margin-top: .3rem;
+}
+
+.hunt-header-a{
+  margin: 1.6rem 0 0 3rem;
+  float: right;
+}
