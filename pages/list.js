@@ -43,7 +43,7 @@ const Home = () => {
               dataSource={mylist}
               renderItem={(item, index) => (
                 <List.Item className="hunt-home-list-item">
-                  <div className="nes-container is-dark">
+                  <div className={index%2 === 0 ? "nes-container is-dark" : "nes-container"}>
                     <div className="hunt-home-list-title">{ item.title }</div>
                     <div className="hunt-home-list-icon">
                       <span><Icon type="calendar"/> 2012-12-12 12:31:11</span>

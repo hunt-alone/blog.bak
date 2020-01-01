@@ -63,11 +63,12 @@
 
 .comm-left .hunt-home-list-title {
     font-size:1.3rem;
-    color: #8005c8;
+    color: #03332f;
     padding: 0 0.5rem;
+    font-weight: 600;
 }
 .comm-left .hunt-home-list-context {
-    color: #d1d1d1;
+    color: #252222;
     padding:.5rem;
 }
 .comm-left .hunt-home-list-icon {
@@ -76,40 +77,41 @@
 .comm-left .hunt-home-list-icon span {
     display: inline-block;
     padding: 0 10px;
-    color: #d1d1d1;
+    color: #252222;
 }
 .comm-left .hunt-home-list-icon span i {
     position: relative;
     top: -4px;
 }
 
-
-.comm-right .hunt-home-list-title {
-    font-size:1.3rem;
-    color: #7dbb78;
-    padding: 0 0.5rem;
-}
-.comm-right .hunt-home-list-context {
-    color: #333333;
-    padding:.5rem;
-}
-.comm-right .hunt-home-list-icon {
-    padding:.5rem 0;
-}
-.comm-right .hunt-home-list-icon span {
-    display: inline-block;
-    padding: 0 10px;
-    color: #333333;
-}
-.comm-right .hunt-home-list-icon span i {
-    position: relative;
-    top: -4px;
-}
 .nes-lash {
   position: relative;
   display: inline-block;
   width: 84px;
   height: 90px
+}
+
+.comm-left .is-dark .hunt-home-list-title {
+  font-size:1.3rem;
+  color: #b549f3;
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
+.comm-left .is-dark .hunt-home-list-context {
+  color: #d1d1d1;
+  padding:.5rem;
+}
+.comm-left .is-dark .hunt-home-list-icon {
+  padding:.5rem 0;
+}
+.comm-left .is-dark .hunt-home-list-icon span {
+  display: inline-block;
+  padding: 0 10px;
+  color: #d1d1d1;
+}
+.comm-left .is-dark.hunt-home-list-icon span i {
+  position: relative;
+  top: -4px;
 }
 
 

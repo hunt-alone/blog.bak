@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../public/style/components/header.css'
-import { Row, Col, Menu, Icon, Typography } from 'antd'
+import { Row, Col, Menu, Icon, Typography, Result } from 'antd'
+import servicePath from '../config/aplUrl'
+import Router from 'next/router'
+import axios from 'axios'
+import serveicePath from '../config/aplUrl'
 
 const Header = () => {
+  const [navArray, setNavArray] = useState([])
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(serveicePath.getTypeInfo).then((res) => {
+        console.log(res)
+        return res.data.data
+        
+      })
+      setNavArray(result)
+    }
+    fetchData()
+  }, [])
+
+  const handleClick = (e) => {
+    if(e === '0') {
+      Router.push('/index')
+    } else {
+      Router.push('/list?id=' + e )
+    }
+  }
   return (
     <div className="hunt-header">
       <Row type="flex" justify="center">
@@ -13,15 +37,17 @@ const Header = () => {
           <Typography.Text ellipsis="true" strong="true" className="hunt-header-sign">You don't worry about meeting your friend, who doesn't know you.</Typography.Text>
         </Col>
         <Col xs={0} sm={0} md={0} lg={0} xl={8} xxl={6} style={{ paddingRight: '8px'}}>
-          <a href="/detailed" className="hunt-header-a nes-badge is-icon">
-            <span className="is-dark">m</span>
-            <span className="is-success">LIFE</span>
-          </a>
-          <a href="/list" className="hunt-header-a nes-badge is-icon">
-            <span className="is-warning">t</span>
-            <span className="is-primary">LEARN</span>
-          </a>
-          <a href="/" className="hunt-header-a nes-badge is-icon">
+          {
+            navArray.map(item => {
+              return (
+                <a onClick={()=> {handleClick(item.orderNum)}} key={item.Id} className="hunt-header-a nes-badge is-icon">
+                <span className={item.icon_style}>{item.icon_content}</span>
+                <span className={item.style}>{item.typeName}</span>
+              </a>
+              )
+            })
+          }
+          <a onClick={()=> {handleClick('0')}} className="hunt-header-a nes-badge is-icon">
             <span className="is-dark">h</span>
             <span className="is-warning">HOME</span>
           </a>
@@ -30,5 +56,4 @@ const Header = () => {
     </div>
   )
 }
-
 export default Header

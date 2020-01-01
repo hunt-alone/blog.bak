@@ -22,9 +22,9 @@ const Author = () => {
         <div className="hunt-author-introduction">
           <p>莫道前路无知己，天下谁人不识君</p>
           <Divider>Social Account</Divider>
-          <Avatar size={28} icon={<Icon type="github" />} className="hunt-account"/>
-          <Avatar size={28} icon={<Icon type="qq" />} className="hunt-account"/>
-          <Avatar size={28} icon={<Icon type="wechat" />} className="hunt-account"/>
+          <Avatar size={36} icon={<Icon type="github" />} className="hunt-account"/>
+          <Avatar size={36} icon={<Icon type="qq" />} className="hunt-account"/>
+          <Avatar size={36} icon={<Icon type="wechat" />} className="hunt-account"/>
         </div>
       </div>
     </div>
