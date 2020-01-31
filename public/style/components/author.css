@@ -4,17 +4,29 @@
 }
 
 .hunt-author-introduction{
-    font-size: .8rem;
+    font-size: 1rem;
     color: #999;
 }
 .hunt-account{
     position: relative;
-    background-color: #666;
-    margin-left: .5rem;
-    margin-right: .5rem;
+    background-color: #666 !important;
+    margin: 0 .5rem !important;
 }
 .hunt-account i {
   position: absolute;
   top: 25%;
   left: 25%;
+}
+.ant-popover-inner-content {
+    background-color: #333;
+    border-radius: 10px;
+    color: #d3d3d3;
+    font-size: 16px;
+    text-align: center;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+.ant-popover-arrow {
+    border-right-color: #333 !important;
+    border-bottom-color: #333 !important;
 }

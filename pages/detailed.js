@@ -5,7 +5,7 @@ import { Row, Col, Icon, Breadcrumb, Affix, BackTop } from 'antd'
 import Header from '../components/Header'
 import Author from '../components/Author'
 import Footer from '../components/Footer'
-import '../public/style/pages/Detailed.css'
+import '../public/style/pages/detailed.css'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
@@ -38,37 +38,39 @@ const Detailed =  (props) => {
   return (
     <>
       <Head>
-        <title>hunt</title>
-        <link rel="icon" href="/html.png" />
+        <title>内容|撖腾的博客</title>
+        <link rel="shortcut icon" href="/favico/html.ico" />
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
+        <meta name="keywords" content="撖腾，博客，hunt，汉腾, 韩腾，react，nextjs，nes.css, antd, vue, threejs, coder"></meta>
+        <meta name="description" content="XX千万程序员观看，XX网千万程序员观看，XX网千万程序员观看，博客，XX博客"></meta>
       </Head>
       <Header />
       <div className="hunt-home-list-content">
         <Row className="comm-main" type="flex" justify="center">
-          <Col className="comm-left" xs={22} sm={22} md={22} lg={14} xl={14} xxl={12} style={{ border: 'none'}}>
+          <Col className="comm-left" xs={22} sm={22} md={22} lg={20} xl={14} xxl={14} style={{ border: 'none'}}>
             <div className="hunt-bread-div">
               <Breadcrumb>
-                <Breadcrumb.Item><a href="/">home</a></Breadcrumb.Item>
-                <Breadcrumb.Item><a>learn</a></Breadcrumb.Item>
-                <Breadcrumb.Item><a href="/life">life</a></Breadcrumb.Item>
+                <Breadcrumb.Item><a href="/">HOME</a></Breadcrumb.Item>
+                <Breadcrumb.Item><a href={'/list?id=' + props.typeId}>{ props.typeName }</a></Breadcrumb.Item>
+                <Breadcrumb.Item><a>{ props.title}</a></Breadcrumb.Item>
               </Breadcrumb>
             </div>
             <h6 className="hunt-detailed-title">
-              React学习笔记
+              { props.title }
             </h6>
             <div className="hunt-list-icon hunt-center">
-              <span><Icon type="calendar" /> 2019-05-12</span>
-              <span><Icon type="folder" /> learn</span>
-              <span><Icon type="fire" /> 123</span>
+  <span><Icon type="calendar" /> { props.addTime }</span>
+              <span><Icon type="folder" /> { props.typeName }</span>
+              <span><Icon type="fire" /> { props.view_count }</span>
             </div>
-            <div className="hunt-detailed-content" dangerouslySetInnerHTML={{ __html: html}}>
-            </div>
+            <div className="hunt-detailed-content" dangerouslySetInnerHTML={{ __html: html}}></div>
           </Col>
           <Col className="comm-right" xs={0} sm={0} md={0} lg={0} xl={8} xxl={6} style={{ border: 'none'}}>
             <Author />
             <Affix offsetTop={84}>
-              <div className="hunt-detaled-navbar">
-                <h6 className="hunt-nav-title">文章目录</h6>
+              <div className="nes-container with-title">
+                <h6 className="hunt-home-list-header">contents</h6>
                 { tocify && tocify.render()}
               </div>
             </Affix>

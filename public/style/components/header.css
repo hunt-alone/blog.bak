@@ -21,6 +21,6 @@
 }
 
 .hunt-header-a{
-  margin: 1.6rem 0 0 3rem;
+  margin: 1.6rem 0 0 3rem !important;
   float: right;
 }

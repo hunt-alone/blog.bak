@@ -2,42 +2,29 @@
   /*滚动条整体样式*/
   width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
   height: 1px;
-  }
-  ::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-thumb {
   /*滚动条里面小方块*/
   border-radius: 10px;
   box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
   background   : #d1d1d1;
-  }
-  ::-webkit-scrollbar-track {
+}
+::-webkit-scrollbar-track {
   /*滚动条里面轨道*/
   box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
   background   : #ededed;
-  }
+}
+.hunt-bread-div {
+	padding: .4rem 1.3rem;
+	margin-bottom: .4rem;
+	border-bottom: 1px solid #eee;
+	background-color: rgba(87, 213, 198, .618);
+	font-family: "Times New Roman", Georgia, Serif;
+	font-weight: 600;
+}
 .comm-main {
   font-family: 'Press Start 2P', cursive;
   margin-top: 5.2rem;
-}
-.github-link {
-  position: fixed;
-  top: 80px;
-  left: 10px;
-  z-index: 999;
-  display: flex;
-  height: 100px;
-  color: #333;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.github-link .nes-balloon {
-  text-decoration: none;
-  align-self: flex-start;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.8rem;
-  color: #333;
-}
-.github-link:hover {
-  text-decoration: none;
 }
 .comm-main .ant-list-header {
   border: none !important;
@@ -113,7 +100,44 @@
   position: relative;
   top: -4px;
 }
+pre{
+  display: block;
+  background-color: #283646 !important;
+   padding: .5rem !important;
+   overflow-y: auto;
+   font-weight: 300;
+   font-family: Menlo, monospace;
+   border-radius: .3rem;
+}
 
+pre >code{
+  border:0px !important;
+  background-color: #283646 !important;
+  color:#FFF;
+
+}
+code {
+  display: inline-block ;
+  background-color:#f3f3f3;
+  border:1px solid #fdb9cc;
+  border-radius:3px;
+  font-size: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color:#4f4f4f;
+  margin: 0px 3px;
+
+}
+
+.list-context img{
+ width:100% ;
+ border-radius:5px;
+ border:1px solid #f0f0f0;
+ max-width:1000px !important;
+ display: block;
+ margin:8px  auto ;
+
+}
 
 .nes-lash::before {
   position: absolute;
